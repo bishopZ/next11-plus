@@ -28,34 +28,33 @@ Next.js template filled with best practices and examples.
 
 + Added lots of Typescript examples
 
++ Change comments to use JSDoc format
 
 ## TODO
 
++ add tests
+
++ https://next-auth.js.org/
 
 + Change remote image example
 
-
-
-+ Relay-nextjs
-
-hasura?
-
-+ pubDate needs to be string | Date
-
-+ Change mochData to use the Github API
-
-+ Flexbox
-https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic
++ Flexbox, https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic
 
 + HTML Review, compare to apple google
 + Code Review
 
-+ test, test-driven?
-https://github.com/testjavascript/nodejs-integration-tests-best-practices
-
-+ https://next-auth.js.org/
++ test-driven, https://github.com/testjavascript/nodejs-integration-tests-best-practices
 
 + Suspence
+
+
++ Change mochData to use the Github API
+
++ add public APIs, https://github.com/public-apis/public-apis
+
++ Relay-nextjs
++ hasura?
+
 
 ## Getting Started
 

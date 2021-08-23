@@ -1,6 +1,73 @@
-## Description
 
 Next.js template filled with best practices and examples.
+
+## Motivation
+
+When you create an starter application with `create-react-app`, `create-next-app` or the majority of similiar creation tools, the app your given is wonderful in many ways, but fails to follow best practices outside of the narrow scope of the base language. `create-react-app` has many best practices for react, but not for CSS, Accessibility, SEO and a host of other concerns that any person waning to publish a website will want and need. Next.js, as an opinionated framework, addresses this problem in many ways, but still lacks examples of the various features that Next provides.
+
+This repo is trying to be a slightly enhanced starter library that provides a concise examples of all the features, best practices, and best-of-breed addons.  Why would you run Next without Sass? Instead of adding Sass to every project, let's just add it to the starter project.
+
+
+## Collaboration
+
+We're looking for a few good nit-pickers!
+
+Make comments, request issues, find a type that can be better!
+
+Is everything in this starter library as good as it can possibly be?
+
+
+## Getting Started
+
+Create a `.env.local` file and add these lines
+
+```
+NODE_ENV=development
+SITE_URL=http://localhost:3000
+```
+
+Then, run the development server.
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+To lint both the JS and CSS, run
+
+```
+npm run lint
+```
+
+To do a production build, run
+
+```
+npm run build
+```
+
+
+## Hosting on Vercel
+
+Free hosting on Vercel is only through the CLI tool.
+
+```
+npm i -g vercel
+vercel
+```
+
+This should launch the project and provide both a preview URL and a vercel CNAME.
+
+
+## Change Log
 
 + Started with a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -55,39 +122,6 @@ Next.js template filled with best practices and examples.
 + Relay-nextjs
 + hasura?
 
++ requestAnimationFrame example
++ webworker example
 
-## Getting Started
-
-Create a `.env.local` file and add these lines
-
-```
-NODE_ENV=development
-SITE_URL=http://localhost:3000
-```
-
-Then, run the development server.
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Hosting on Vercel
-
-Free hosting on Vercel is only through the CLI tool.
-
-```
-npm i -g vercel
-vercel
-```
-
-This should launch the project and provide both a preview URL and a vercel CNAME.

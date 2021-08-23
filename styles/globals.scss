@@ -1,0 +1,81 @@
+@import './variables.scss';
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  padding: 0; margin: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+/* L. David Baron: https://twitter.com/davidbaron/status/794138427952222210 */
+base, basefont, datalist, head, meta, script, style, title, noembed, param, template {
+  display: none;
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0; margin: 0;
+  min-height: 0.1rem;
+  background-color: $white;
+  color: $dark-gray;
+  font-weight: normal; font-style: normal;
+  font-family: $body-font;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  white-space: 0;
+  vertical-align: top;
+  -webkit-tap-highlight-color: $blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  clear: both;
+  z-index: 1;
+}
+
+body, div, section, nav, header, footer, main, article {
+  position: relative;
+}
+
+img {
+  width: auto; height: auto;
+  display: block;
+  position: relative;
+  border: 0;
+  max-width: 100%;
+  object-fit: cover;
+  // in case display property is changed, better default for images than top
+  vertical-align: center;
+}
+
+nav li, footer li { list-style: none; }
+
+::selection {
+  background: $blue;
+  color: $white;
+  text-shadow: none;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0;
+  border: 0.06rem solid $dark-gray;
+  cursor: pointer;
+}

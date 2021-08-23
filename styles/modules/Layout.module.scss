@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.container {
+  min-height: 100vh;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & > * { margin: 1.25rem 0; }
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 0.1rem solid $light-gray;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939#81ec
+.visuallyHidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 0.01rem; height: 0.01rem;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -0.01rem;
+}

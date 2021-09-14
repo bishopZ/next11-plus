@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import { identity } from 'lodash';
+import '../styles/globals.scss';
 
 /** Main application component */
 const MyApp = ({ Component, pageProps }: AppProps) => {

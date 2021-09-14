@@ -37,6 +37,7 @@ class InputText extends Component<Props, JSX.Element> {
     return (
       <>
         <label htmlFor={name}>{label}</label>
+        &nbsp;
         <input
           type="text"
           id={name} name={name}

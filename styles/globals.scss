@@ -25,6 +25,9 @@ html, body {
   background-color: $white;
   color: $dark-gray;
   font-weight: normal; font-style: normal;
+}
+
+body * {
   font-family: $body-font;
 }
 
@@ -60,8 +63,6 @@ img {
   border: 0;
   max-width: 100%;
   object-fit: cover;
-  // in case display property is changed, better default for images than top
-  vertical-align: center;
 }
 
 nav li, footer li { list-style: none; }

@@ -1,11 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-/** default document component */
 class MyDocument extends Document {
-  static render() {
-    // can't be an arrow function
+  render() {
     return (
-      <Html lang="en">
+      <Html lang="en-us">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
@@ -17,8 +15,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

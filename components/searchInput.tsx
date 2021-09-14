@@ -1,5 +1,5 @@
 import { Dispatch } from './database/models';
-import Input from './atoms/inputText';
+import InputText from './atoms/inputText';
 
 /** value could be any user input */
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 
 /** a controlled input */
 const SearchInput = ({ value, onChange }: Props) => (
-  <Input
+  <InputText
     name="search-phrase"
     label="A Controlled Input"
     ariaLabel="Search through site content"

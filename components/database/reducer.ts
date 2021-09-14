@@ -69,9 +69,9 @@ export const reducer = (state: AppStateModel, action: ActionModel) => {
         };
         return newState();
       }
-      return currentState;
+      return state;
 
     default:
-      return currentState;
+      return state;
   }
 };

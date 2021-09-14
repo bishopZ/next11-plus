@@ -10,7 +10,6 @@ interface Props { post: PostModel; }
 /** a post's detail view */
 const DocumentDisplay = ({ post }: Props) => {
 
-  // TODO do something with content
   const { title, publishDate, author/* , content */ } = post;
   return (
     <section role="article">

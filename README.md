@@ -3,11 +3,12 @@ Next.js template filled with best practices and examples.
 
 ## Motivation
 
-When you create an starter application with `create-react-app`, `create-next-app` or the majority of similiar command-line tools, the app your given is wonderful in many ways, but fails to follow best practices outside of the narrow scope of its base framework. `create-react-app` has many best practices for react, but not for CSS, Accessibility, SEO, unit tests and a host of other concerns that any person wanting to publish a well-made website needs. Next.js, as an opinionated framework, addresses some of these problems, but still lacks examples of the various features that Next itself provides.
+When you create an starter application with `create-react-app`, `create-next-app` or the majority of similiar command-line tools, the app your given is wonderful in many ways, but fails to follow best practices outside of the narrow scope of its base framework. `create-react-app` has many best practices for React, but not for CSS, accessibility, SEO, unit tests and a host of other concerns that any person wanting to publish a well-made website needs. Next.js, as an opinionated framework, addresses some of these problems, but still lacks examples of the various features that Next itself provides.
 
-If those repos are trying to be the simplest form of a specific technology, this repo aims to be the simplest form of a family of technologies. This repo aims to be a slightly enhanced starter library, that provides concise examples of all the features, best practices, and best-of-breed addons.
+If those repos are trying to be the simplest form of a specific technology, this repo aims to be the simplest form of a family of technologies. This repo aims to be a slightly enhanced starter library,providing concise examples of all the features, best practices, and best-of-breed addons.
 
-Why would you run Next without Sass? Instead of adding Sass to every project, let's just add it to the starter project.
+Why would you run Next without Sass? Instead of adding Sass to every project, let's add it to the starter project.
+
 
 ## Collaboration
 
@@ -49,17 +50,6 @@ npm run build
 ```
 
 
-## Hosting on Vercel
-
-Free hosting on Vercel is only through the CLI tool.
-
-```
-npm i -g vercel
-vercel
-```
-
-This should launch the project and provide both a preview URL and a vercel CNAME.
-
 
 ## Change Log
 
@@ -71,7 +61,7 @@ This should launch the project and provide both a preview URL and a vercel CNAME
 + Organized the CSS
 + Added WCAG and ARIA best practices
 
-+ Added Next.js Document file, Layout files and error pages.
++ Added Next.js Layout files and error pages.
 + Added a next/image examples, local and remote.
 + Added [Next-Sitemap](https://www.npmjs.com/package/next-sitemap)
 + Addded Next.js recommended security headers
@@ -87,23 +77,46 @@ This should launch the project and provide both a preview URL and a vercel CNAME
 
 + Added an example API
 
-+ Added lots of Typescript examples
++ Update TSConfig and added lots of Typescript examples
 
 + Changed comments to use JSDoc format
++ Added some ES features: ??, Object.freeze, more
 
 
 ## TODO
+
++ Next Document file stopped working
+
++ Change the favicon
+
++ T extends HTMLElement = HTMLElement
++ TSLint rules to warn against enums, no-invalid-this, noImplicitThis
 
 + remove half-built features, filter, document content
 + pubDate should be a date in the reducer
 + moch is spelled mock
 + Change remote image example
++ an example of flatMap?
++ are sourcemaps working?
++ Move SiteInfo into a Context instead of reducer
++ Can anything be memoized?, https://stackfull.dev/memoizing-async-functions-in-javascript
++ The API could use standardized Status Codes, move to Actions
+
++ add useCallback, and useMemo
++ Update CSS reset to use water.css
++ use !! for truthy
++ generator function example
+
++ update to typescript 4.4
++ add a tslint file
+
++ Update Node version and review other libraries
 
 + Add Suspence
 
-+ are sourcemaps working?
-+ add unit tests, Jest
-+ test-driven?, https://github.com/testjavascript/nodejs-integration-tests-best-practices
++ GraphQL
++ Relay-nextjs
++ hasura?
 
 + mobile-first, responsive CSS
 + Flexbox, https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic
@@ -113,14 +126,20 @@ This should launch the project and provide both a preview URL and a vercel CNAME
 + add other public APIs, https://github.com/public-apis/public-apis
 
 + https://next-auth.js.org/
-+ Relay-nextjs
-+ hasura?
 
 + requestAnimationFrame example
 + webworker example, https://www.smashingmagazine.com/2021/06/web-workers-2021/
 
 + add dtslint for testing types in unit tests
 
++ add unit tests, Jest
++ test-driven?, https://github.com/testjavascript/nodejs-integration-tests-best-practices
+
++ stripe, https://www.youtube.com/watch?v=DLGF8neT8d0
+
++ Node logging, https://blog.appsignal.com/2021/09/01/best-practices-for-logging-in-nodejs.html
+
++ Content aware image crop, https://github.com/jwagner/smartcrop.js
 
 # Contributors
 

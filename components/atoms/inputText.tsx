@@ -18,9 +18,9 @@ interface Props {
 type OptionalElement = HTMLInputElement | null;
 
 /** generic display of a controlled text input.
- * also, an example of a React component for the componentDidMount 
+ * also, an example of a React component for the componentDidMount
  * lifecycle method and for Context API */
-class InputText extends Component<Props, never> {
+class InputText extends Component<Props, JSX.Element> {
 
   formField: OptionalElement = null;
 
@@ -29,11 +29,11 @@ class InputText extends Component<Props, never> {
 
   render () {
     const {
-      value, onChange,
-      name, label, ariaLabel, placeholder,
-      index, isSearch
+      value, onChange, name, label, ariaLabel, placeholder, index, isSearch
     } = this.props;
+
     const dispatch = this.context;
+
     return (
       <>
         <label htmlFor={name}>{label}</label>

@@ -61,7 +61,7 @@ npm run build
 + Organized the CSS
 + Added WCAG and ARIA best practices
 
-+ Added Next.js Layout files and error pages.
++ Added Next.js Document file, page-level Layouts, and error pages.
 + Added a next/image examples, local and remote.
 + Added [Next-Sitemap](https://www.npmjs.com/package/next-sitemap)
 + Addded Next.js recommended security headers
@@ -69,8 +69,7 @@ npm run build
 + Added an example of every major paradym in React: Reducer, Hooks, Component, Controlled input, Context API
 + Atomized the components
 
-+ Added Metadata for SEO
-+ Added all the favicon fields
++ Added Metadata for SEO, and the favicon fields, site.manifest
 
 + Upgraded ESLint to Typescript-ESLint with lots of custom rules for ease of use.
 + Added Stylelint for CSS Linting
@@ -84,13 +83,6 @@ npm run build
 
 
 ## TODO
-
-+ Next Document file stopped working
-
-+ Change the favicon
-
-+ T extends HTMLElement = HTMLElement
-+ TSLint rules to warn against enums, no-invalid-this, noImplicitThis
 
 + remove half-built features, filter, document content
 + pubDate should be a date in the reducer
@@ -109,6 +101,8 @@ npm run build
 
 + update to typescript 4.4
 + add a tslint file
++ T extends HTMLElement = HTMLElement
++ TSLint rules to warn against enums, no-invalid-this, noImplicitThis
 
 + Update Node version and review other libraries
 

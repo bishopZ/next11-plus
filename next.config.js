@@ -3,7 +3,7 @@ module.exports = {
   env: {},
   sassOptions: {},
   images: {
-    domains: ['karshhagan-website.s3.amazonaws.com']
+    domains: ['upload.wikimedia.org']
   },
   async redirects() {
     return [

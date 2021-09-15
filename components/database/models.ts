@@ -55,6 +55,5 @@ export interface PostModel {
   title: string;
   publishDate: Date | string;
   author?: { name: string; };
-  content?: { document: [] };
   state?: Actions.PublicationState
 }

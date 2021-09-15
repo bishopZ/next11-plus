@@ -7,7 +7,6 @@ export const posts: readonly PostModel[] = [
     title: 'post 1',
     publishDate: new Date().toDateString(),
     author: { name: 'bishop' },
-    content: { document: [] },
     state: 'published'
   },
   {
@@ -15,7 +14,6 @@ export const posts: readonly PostModel[] = [
     title: 'post 2',
     publishDate: new Date().toDateString(),
     author: { name: 'bishop' },
-    content: { document: [] },
     state: 'published'
   }
 ];

@@ -66,17 +66,17 @@ npm run build
 + Added [Next-Sitemap](https://www.npmjs.com/package/next-sitemap)
 + Addded Next.js recommended security headers
 
-+ Added an example of every major paradym in React: Reducer, Hooks, Component, Controlled input, Context API
-+ Atomized the components
++ Added an example of major paradyms in React: Reducer, Hooks, Component, Controlled input, Context API
++ Atomized the React components
 
-+ Added Metadata for SEO, and the favicon fields, site.manifest
++ Added Metadata for SEO, and the favicon fields, and site.manifest
 
 + Upgraded ESLint to Typescript-ESLint with lots of custom rules for ease of use.
 + Added Stylelint for CSS Linting
 
 + Added an example API
 
-+ Update TSConfig and added lots of Typescript examples
++ Updated TSConfig and added lots of Typescript examples
 
 + Changed comments to use JSDoc format
 + Added some ES features: ??, Object.freeze, more
@@ -84,56 +84,45 @@ npm run build
 
 ## TODO
 
-+ remove half-built features, filter, document content
-+ pubDate should be a date in the reducer
-+ moch is spelled mock
++ remove half-built document content feature
 + Change remote image example
-+ an example of flatMap?
-+ are sourcemaps working?
 + Move SiteInfo into a Context instead of reducer
-+ Can anything be memoized?, https://stackfull.dev/memoizing-async-functions-in-javascript
++ pubDate should be a date in the reducer
 + The API could use standardized Status Codes, move to Actions
-
-+ add useCallback, and useMemo
-+ Update CSS reset to use water.css
-+ use !! for truthy
-+ generator function example
++ are sourcemaps working?
 
 + update to typescript 4.4
-+ add a tslint file
-+ T extends HTMLElement = HTMLElement
-+ TSLint rules to warn against enums, no-invalid-this, noImplicitThis
++ use more type defaults, T extends HTMLElement = HTMLElement
++ Lint rules to warn against enums, no-invalid-this, noImplicitThis
 
-+ Update Node version and review other libraries
++ Update Node version and review other library versions
 
-+ Add Suspence
-
-+ GraphQL
-+ Relay-nextjs
-+ hasura?
++ Can anything be memoized?, https://stackfull.dev/memoizing-async-functions-in-javascript
++ add useCallback, and useMemo examples
++ Update CSS reset to use water.css?
++ use !! for truthy?
++ generator function example
++ an example of flatMap?
++ requestAnimationFrame example
++ webworker example, https://www.smashingmagazine.com/2021/06/web-workers-2021/
 
 + mobile-first, responsive CSS
 + Flexbox, https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic
 
-+ Change mockData to use the Github API
-+ add to counter, numbersapi.com
-+ add other public APIs, https://github.com/public-apis/public-apis
-
-+ https://next-auth.js.org/
-
-+ requestAnimationFrame example
-+ webworker example, https://www.smashingmagazine.com/2021/06/web-workers-2021/
-
-+ add dtslint for testing types in unit tests
++ Add Suspence
++ Content aware image crop, https://github.com/jwagner/smartcrop.js
 
 + add unit tests, Jest
 + test-driven?, https://github.com/testjavascript/nodejs-integration-tests-best-practices
 
-+ stripe, https://www.youtube.com/watch?v=DLGF8neT8d0
-
++ GraphQL, apollo, Relay-nextjs, hasura?
++ Change sample data to use the Github API
++ Try, catch, throw for external resources
++ add to counter, numbersapi.com
++ add other public APIs, https://github.com/public-apis/public-apis
++ https://next-auth.js.org/
 + Node logging, https://blog.appsignal.com/2021/09/01/best-practices-for-logging-in-nodejs.html
 
-+ Content aware image crop, https://github.com/jwagner/smartcrop.js
 
 # Contributors
 

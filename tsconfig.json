@@ -6,19 +6,20 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "alwaysStrict": true,
+    // As of TypeScript 4.3, 'strict' enables these 8 compiler options.
+    // "alwaysStrict": true,
+    // "noImplicitAny": true,
+    // "noImplicitThis": true,
+    // "strictBindCallApply": true,
+    // "strictFunctionTypes": true,
+    // "strictNullChecks": true,
+    // "strictPropertyInitialization": true,
+    // "useUnknownInCatchVariables": true,
+
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-
-    // "exactOptionalPropertyTypes": true, // in ts 4.4
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "suppressImplicitAnyIndexErrors": false,
@@ -35,6 +36,8 @@
     "removeComments": true,
     "baseUrl": ".",
     "declaration": true
+
+    // "exactOptionalPropertyTypes": true, // in ts 4.4
 
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

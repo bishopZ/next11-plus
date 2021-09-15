@@ -26,7 +26,6 @@ interface AppComplete {
   appState: typeof Actions.COMPLETE;
   originalList: readonly PostModel[];
   currentList: readonly PostModel[];
-  filter: Actions.FilterState;
   searchPhrase: string;
   siteInfo: SiteInfoModel;
 }
@@ -64,8 +63,7 @@ export const reducer = (state: AppStateModel, action: ActionModel) => {
           ...currentState,
           appState: Actions.COMPLETE,
           originalList: action.posts,
-          currentList: action.posts,
-          filter: Actions.ALL
+          currentList: action.posts
         };
         return newState();
       }

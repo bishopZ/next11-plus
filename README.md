@@ -84,8 +84,8 @@ npm run build
 
 ## TODO
 
-+ remove half-built document content feature
-+ Change remote image example
++ Update remote image example
+
 + Move SiteInfo into a Context instead of reducer
 + pubDate should be a date in the reducer
 + The API could use standardized Status Codes, move to Actions

@@ -25,7 +25,7 @@ const DocumentDisplay = ({ post }: Props) => {
       />
       <ImageDisplay
         description="a remote example image"
-        src={'https://karshhagan-website.s3.amazonaws.com/upload/KH_ABOUT_Boots_0359-1.jpg'}
+        src={'https://upload.wikimedia.org/wikipedia/commons/b/b5/Staring_Down_Hurricane_Florence.jpg'}
         width={300}
         height={300}
         aboveFold={true}

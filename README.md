@@ -81,21 +81,21 @@ npm run build
 + Changed comments to use JSDoc format
 + Added some ES features: ??, Object.freeze, more
 
++ Updates the dependency versions of typescript, sass, next and eslint.
+
 
 ## TODO
-
-+ Update remote image example
 
 + Move SiteInfo into a Context instead of reducer
 + pubDate should be a date in the reducer
 + The API could use standardized Status Codes, move to Actions
 + are sourcemaps working?
 
-+ update to typescript 4.4
 + use more type defaults, T extends HTMLElement = HTMLElement
 + Lint rules to warn against enums, no-invalid-this, noImplicitThis
 
 + Update Node version and review other library versions
++ Host on vercel
 
 + Can anything be memoized?, https://stackfull.dev/memoizing-async-functions-in-javascript
 + add useCallback, and useMemo examples

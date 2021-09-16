@@ -35,9 +35,10 @@
     "sourceMap": true,
     "removeComments": true,
     "baseUrl": ".",
-    "declaration": true
+    "declaration": true,
 
-    // "exactOptionalPropertyTypes": true, // in ts 4.4
+    // more strict, new in ts 4.4
+    // "exactOptionalPropertyTypes": true,
 
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

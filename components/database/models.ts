@@ -53,7 +53,7 @@ export type LayoutComponent = {
 export interface PostModel {
   id: string;
   title: string;
-  publishDate: Date | string;
+  publishDate: Date;
   author?: { name: string; };
   state?: Actions.PublicationState
 }

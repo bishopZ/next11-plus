@@ -1,15 +1,13 @@
 import { NextApiResponse, NextApiRequest } from 'next';
 import { people } from '../../../components/database/mochData';
-
-const defaultStatus = 200;
-const notFoundStatus = 404;
+import { FOUND, NOT_FOUND } from '../../../components/database/actions';
 
 /** People API, return all people */
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
   if (req.headers) {
-    res.status(defaultStatus).json(people);
+    res.status(FOUND).json(people);
   } else {
-    res.status(notFoundStatus);
+    res.status(NOT_FOUND);
   }
 };
 

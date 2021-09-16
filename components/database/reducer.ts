@@ -25,7 +25,6 @@ interface AppStarting {
 interface AppComplete {
   appState: typeof Actions.COMPLETE;
   originalList: readonly PostModel[];
-  currentList: readonly PostModel[];
   searchPhrase: string;
   siteInfo: SiteInfoModel;
 }
@@ -59,11 +58,15 @@ export const reducer = (state: AppStateModel, action: ActionModel) => {
 
     case Actions.SET_POSTS:
       if (action.posts) {
+        const newPosts = action.posts.map(post => {
+          if (typeof post.publishDate === 'string')
+            post.publishDate = new Date(post.publishDate);
+          return post;
+        });
         currentState = {
           ...currentState,
           appState: Actions.COMPLETE,
-          originalList: action.posts,
-          currentList: action.posts
+          originalList: newPosts
         };
         return newState();
       }

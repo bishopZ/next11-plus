@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { people } from '../../../components/database/mochData';
+import { FOUND, NOT_FOUND } from '../../../components/database/actions';
 
 /** Person API, return a person */
 const personHandler = (
@@ -7,18 +8,16 @@ const personHandler = (
   res: NextApiResponse
 ) => {
   const filtered = people.filter(p => p.id === id);
-  const defaultStatus = 200;
-  const notFoundStatus = 404;
   const limit = 0;
 
   // User with id exists
   if (filtered.length > limit) {
     res
-      .status(defaultStatus)
+      .status(FOUND)
       .json(filtered[limit]);
   } else {
     res
-      .status(notFoundStatus)
+      .status(NOT_FOUND)
       .json({ message: `User with id: ${id} not found.` });
   }
 };

@@ -86,9 +86,6 @@ npm run build
 
 ## TODO
 
-+ Move SiteInfo into a Context instead of reducer
-+ pubDate should be a date in the reducer
-+ The API could use standardized Status Codes, move to Actions
 + are sourcemaps working?
 
 + use more type defaults, T extends HTMLElement = HTMLElement

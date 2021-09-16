@@ -58,16 +58,10 @@ export const reducer = (state: AppStateModel, action: ActionModel) => {
 
     case Actions.SET_POSTS:
       if (action.posts) {
-        const newPosts = action.posts.map(post => {
-          if (typeof post.publishDate === 'string') {
-            post.publishDate = new Date(post.publishDate);
-          }
-          return post;
-        });
         currentState = {
           ...currentState,
           appState: Actions.COMPLETE,
-          originalList: newPosts
+          originalList: action.posts
         };
         return newState();
       }

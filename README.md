@@ -86,15 +86,12 @@ npm run build
 
 ## TODO
 
-+ are sourcemaps working?
-
-+ use more type defaults, T extends HTMLElement = HTMLElement
-+ Lint rules to warn against enums, no-invalid-this, noImplicitThis
-
 + Update Node version and review other library versions
 + Host on vercel
 
-+ Can anything be memoized?, https://stackfull.dev/memoizing-async-functions-in-javascript
++ Lint rules to warn against enums, no-invalid-this, noImplicitThis
++ use an abstract type, T extends HTMLElement = HTMLElement
++ Memoize the Queries, https://stackfull.dev/memoizing-async-functions-in-javascript
 + add useCallback, and useMemo examples
 + Update CSS reset to use water.css?
 + use !! for truthy?

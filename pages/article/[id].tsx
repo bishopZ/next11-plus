@@ -52,7 +52,7 @@ const getStaticProps = async (
   props: Readonly<GetStaticPropsContext>
 ): Promise<PostReturn | null> => {
   const { params } = props;
-  return (!!params)
+  return (typeof params === 'object')
     ? await getPost(params)
     : null;
 };

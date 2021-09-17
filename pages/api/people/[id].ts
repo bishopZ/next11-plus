@@ -12,15 +12,13 @@ const personHandler = (
   const limit = 0;
 
   // User with id exists
-  if (filtered.length > limit) {
-    res
+  (filtered.length > limit)
+    ? res
       .status(FOUND)
-      .json(filtered[limit]);
-  } else {
-    res
+      .json(filtered[limit])
+    : res
       .status(NOT_FOUND)
       .json({ message: `User with id: ${id} not found.` });
-  }
 };
 
 export default personHandler;

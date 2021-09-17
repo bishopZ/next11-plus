@@ -86,19 +86,14 @@ npm run build
 
 ## TODO
 
-+ Memoize the Queries, https://stackfull.dev/memoizing-async-functions-in-javascript
-+ add useCallback, and useMemo examples
-+ use !! for truthy?
 + generator function example
-+ requestAnimationFrame example
++ Add Suspence
++ Content aware image crop, https://github.com/jwagner/smartcrop.js
 
 + better design, mobile-first, responsive CSS
 + Flexbox, https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic
-
++ requestAnimationFrame example
 + Add a screenshot to the readme
-
-+ Add Suspence
-+ Content aware image crop, https://github.com/jwagner/smartcrop.js
 
 + add unit tests, Jest
 + test-driven?, https://github.com/testjavascript/nodejs-integration-tests-best-practices
@@ -121,6 +116,7 @@ npm run build
 + Update CSS reset to use water.css?
 + an example of flatMap?
 + webworker example, https://www.smashingmagazine.com/2021/06/web-workers-2021/
++ useMemo example, Memoize the Queries?, https://stackfull.dev/memoizing-async-functions-in-javascript
 
 
 # Contributors

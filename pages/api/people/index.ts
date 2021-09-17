@@ -7,9 +7,11 @@ const handler = (
   req: Readonly<NextApiRequest>,
   res: Readonly<NextApiResponse>
 ) => {
-  (typeof req.headers.age === 'string')
-    ? res.status(FOUND).json(people)
-    : res.status(NOT_FOUND);
+  if (typeof req.headers.age === 'string') {
+    res.status(FOUND).json(people);
+  } else {
+    res.status(NOT_FOUND);
+  }
 };
 
 export default handler;

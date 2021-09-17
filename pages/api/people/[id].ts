@@ -12,7 +12,7 @@ const personHandler = (
   const limit = 0;
 
   // User with id exists
-  (filtered.length > limit)
+  return (filtered.length > limit)
     ? res
       .status(FOUND)
       .json(filtered[limit])

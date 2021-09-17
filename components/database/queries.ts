@@ -27,7 +27,7 @@ const getPost = async (params: Readonly<ParsedUrlQuery>): Promise<PostQuery> => 
     ? params.id
     : posts[defaultIndex].id;
 
-  /** await in anticipation of using an api */
+  /** await in anticipation of actually using an api */
   const thePost = await getPostById(id);
   return { props: { post: thePost }, revalidate: hourSeconds };
 };

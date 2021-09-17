@@ -47,7 +47,7 @@ class InputText extends Component<Props, JSX.Element> {
           tabIndex={index}
           value={value}
           placeholder={placeholder}
-          onChange={(event: ChangeEvent<HTMLInputElement>) => {
+          onChange={(event: Readonly<ChangeEvent<HTMLInputElement>>) => {
             onChange(dispatch, event.currentTarget.value);
           }}
           ref={element => {

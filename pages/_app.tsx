@@ -3,7 +3,7 @@ import { identity } from 'lodash';
 import '../styles/globals.scss';
 
 /** Main application component */
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps }: Readonly<AppProps>) => {
 
   // Use the layout defined at the page level, if available
   type LayoutComponent = typeof Component

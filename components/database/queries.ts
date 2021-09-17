@@ -21,7 +21,7 @@ const getPosts = async (): Promise<PostsQuery> => {
 export { getPosts }; // necissary to have both async and arrow function
 
 /** get a post by id */
-const getPost = async (params: ParsedUrlQuery): Promise<PostQuery> => {
+const getPost = async (params: Readonly<ParsedUrlQuery>): Promise<PostQuery> => {
   const defaultIndex = 0;
   const id = typeof params.id === 'string'
     ? params.id

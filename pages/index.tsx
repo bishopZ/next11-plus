@@ -4,7 +4,7 @@ import CardList from '../components/cardList';
 import DispatchContext from '../components/context/dispatchContext';
 import Counter from '../components/counter';
 import { START, updateFormField, setPosts } from '../components/database/actions';
-import type { LayoutComponent, PostsReturn } from '../components/database/models';
+import type { LayoutComponent, PostModel, PostsReturn } from '../components/database/models';
 import { getPosts } from '../components/database/queries';
 import { initialState, reducer } from '../components/database/reducer';
 import SearchInput from '../components/searchInput';
@@ -12,8 +12,12 @@ import Layout from '../components/sitewide/layout';
 import MetaHeader from '../components/sitewide/meta';
 import styles from '../styles/modules/Layout.module.scss';
 
+interface Props { readonly posts: PostModel[] }
+
 /** homepage component */
-const Home: LayoutComponent = ({ posts }) => {
+const Home: LayoutComponent = (props: Props) => {
+
+  const { posts } = props;
 
   /** setup a reducer for frontend database */
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -49,8 +53,5 @@ const Home: LayoutComponent = ({ posts }) => {
 export default Home;
 
 /** get data from API */
-const getStaticProps = async (): Promise<PostsReturn> => {
-  const props = await getPosts();
-  return props ?? { props: { posts: [] } };
-};
+const getStaticProps = async (): Promise<PostsReturn> => await getPosts();
 export { getStaticProps };

@@ -22,10 +22,10 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+
     "suppressImplicitAnyIndexErrors": false,
 
     "allowJs": true,
-    "checkJs": true,
     "skipLibCheck": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -36,11 +36,7 @@
     "removeComments": true,
     "baseUrl": ".",
     "declaration": true,
-
-    // more strict, new in ts 4.4
-    // "exactOptionalPropertyTypes": true,
-
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
   "exclude": ["node_modules"]
 }

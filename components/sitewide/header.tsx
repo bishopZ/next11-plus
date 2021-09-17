@@ -1,6 +1,6 @@
 import H1 from '../atoms/h1';
 
-interface Props { title: string; }
+interface Props { readonly title: string; }
 
 /** site header */
 const Header = (props: React.PropsWithChildren<Props>) => (

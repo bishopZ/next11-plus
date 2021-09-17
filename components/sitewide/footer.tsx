@@ -1,6 +1,6 @@
 import styles from '../../styles/modules/Layout.module.scss';
 
-interface Props { message: string; }
+interface Props { readonly message: string; }
 
 /** site footer */
 const Footer = ({ message }: Props) => (

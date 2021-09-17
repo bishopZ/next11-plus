@@ -4,9 +4,10 @@ import { FOUND, NOT_FOUND } from '../../../components/database/actions';
 
 /** Person API, return a person */
 const personHandler = (
-  { query: { id } }: NextApiRequest,
-  res: NextApiResponse
+  req: Readonly<NextApiRequest>,
+  res: Readonly<NextApiResponse>
 ) => {
+  const { query: { id } } = req;
   const filtered = people.filter(p => p.id === id);
   const limit = 0;
 

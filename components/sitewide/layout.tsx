@@ -4,21 +4,21 @@ import Footer from './footer';
 import styles from '../../styles/modules/Layout.module.scss';
 
 interface Props {
-  children: JSX.Element;
-  siteInfo: SiteInfoModel;
+  readonly children: JSX.Element;
+  readonly siteInfo: SiteInfoModel;
 }
 
 /** next layout component */
-const Layout = ({ children, siteInfo }: Props) => (
+const Layout = (props: Props) => (
   <>
     <span className={styles.visuallyHidden}>
       <a href="#content-begins">Skip to Content</a>
     </span>
-    <Header title={siteInfo.siteName} />
+    <Header title={props.siteInfo.siteName} />
     <main id="content-begins">
-      {children}
+      {props.children}
     </main>
-    <Footer message={siteInfo.message} />
+    <Footer message={props.siteInfo.message} />
   </>
 );
 

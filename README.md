@@ -71,7 +71,7 @@ npm run build
 
 + Added Metadata for SEO, and the favicon fields, and site.manifest
 
-+ Upgraded ESLint to Typescript-ESLint with lots of custom rules for ease of use.
++ Upgraded ESLint to Typescript-ESLint with lots of custom ESLint rules for ease of use, and added opinionated type linting rules and overrides.
 + Added Stylelint for CSS Linting
 
 + Added an example API
@@ -86,25 +86,16 @@ npm run build
 
 ## TODO
 
-+ are sourcemaps working?
-
-+ use more type defaults, T extends HTMLElement = HTMLElement
-+ Lint rules to warn against enums, no-invalid-this, noImplicitThis
-
-+ Update Node version and review other library versions
-+ Host on vercel
-
-+ Can anything be memoized?, https://stackfull.dev/memoizing-async-functions-in-javascript
++ Memoize the Queries, https://stackfull.dev/memoizing-async-functions-in-javascript
 + add useCallback, and useMemo examples
-+ Update CSS reset to use water.css?
 + use !! for truthy?
 + generator function example
-+ an example of flatMap?
 + requestAnimationFrame example
-+ webworker example, https://www.smashingmagazine.com/2021/06/web-workers-2021/
 
-+ mobile-first, responsive CSS
++ better design, mobile-first, responsive CSS
 + Flexbox, https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic
+
++ Add a screenshot to the readme
 
 + Add Suspence
 + Content aware image crop, https://github.com/jwagner/smartcrop.js
@@ -119,6 +110,17 @@ npm run build
 + add other public APIs, https://github.com/public-apis/public-apis
 + https://next-auth.js.org/
 + Node logging, https://blog.appsignal.com/2021/09/01/best-practices-for-logging-in-nodejs.html
+
++ Host on vercel, when they support Node 16.x
++ use more ??, ${arg2 || null}
++ ask denver devs for a code review
++ review config files, compare to others
++ HTML review, compare to Apple/Airbnb/Twitter
+
++ use an abstract type, T extends HTMLElement = HTMLElement
++ Update CSS reset to use water.css?
++ an example of flatMap?
++ webworker example, https://www.smashingmagazine.com/2021/06/web-workers-2021/
 
 
 # Contributors

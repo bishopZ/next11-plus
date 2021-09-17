@@ -5,11 +5,12 @@ import ArticleAuthor from './atoms/articleAuthor';
 import ImageDisplay from './atoms/imageDisplay';
 import exampleImage from '../public/drop.jpg';
 
-interface Props { post: PostModel; }
+interface Props { readonly post: PostModel; }
 
 /** a post's detail view */
-const DocumentDisplay = ({ post }: Props) => {
+const DocumentDisplay = (props: Props) => {
 
+  const { post } = props;
   const { title, publishDate, author } = post;
   return (
     <section role="article">

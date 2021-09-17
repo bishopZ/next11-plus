@@ -9,7 +9,7 @@ export interface ActionModel {
 }
 
 /** for the dispatch context file */
-export type Dispatch = (object: ActionModel) => void;
+export type Dispatch = (object: Readonly<ActionModel>) => void;
 
 /** single post return object */
 export type PostReturn = { props: { post: PostModel } };
@@ -46,7 +46,7 @@ export type LayoutComponent = {
   (props: InferGetStaticPropsType<Promise<PostsReturn>>): JSX.Element;
 
   /** pages implement their own page layout */
-  getLayout?: (page: Record<string, unknown>) => JSX.Element;
+  getLayout?: (page: Readonly<Record<string, unknown>>) => JSX.Element;
 }
 
 /** model of a single post */

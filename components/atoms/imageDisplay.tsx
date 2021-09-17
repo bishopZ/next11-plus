@@ -10,7 +10,7 @@ interface Props {
 }
 
 /** generic display of an images */
-const ImageDisplay = ({ src, description, height, width, aboveFold }: Props) => (
+const ImageDisplay = ({ src, description, height, width, aboveFold }: Readonly<Props>) => (
   <Image
     alt={description}
     src={src as StaticImageData}

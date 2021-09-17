@@ -1,6 +1,6 @@
 import { SiteInfoModel } from '../database/reducer';
 
-interface Props { siteInfo: SiteInfoModel }
+interface Props { readonly siteInfo: SiteInfoModel }
 
 /** headers related to search engine ranking */
 const SeoHeaders = ({ siteInfo }: Props) => (

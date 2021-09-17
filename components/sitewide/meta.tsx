@@ -5,7 +5,7 @@ import ExternalScripts from './externalScripts';
 import PreConnect from './preConnect';
 import SeoHeaders from './seoHeaders';
 
-interface Props { siteInfo: SiteInfoModel; }
+interface Props { readonly siteInfo: SiteInfoModel; }
 
 /** meta headers for the site */
 const MetaHeaders = ({ siteInfo }: Props) => (

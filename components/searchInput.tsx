@@ -3,8 +3,8 @@ import InputText from './atoms/inputText';
 
 /** value could be any user input */
 interface Props {
-  value: string;
-  onChange: (dispatch: Dispatch, value: string) => void;
+  readonly value: string;
+  readonly onChange: (dispatch: Dispatch, value: string) => void;
 }
 
 /** a controlled input */

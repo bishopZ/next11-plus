@@ -2,11 +2,10 @@ module.exports = {
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": './tsconfig.json',
     // "ecmaVersion": 2021, // The version of ECMAScript you are using
     // "sourceType": "module", // Enables ECMAScript modules
-    "ecmaFeatures": {
-      "jsx": true,
-    },
+    "ecmaFeatures": { "jsx": true },
   },
   "settings": {
     "react": {
@@ -30,19 +29,43 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
+    "@typescript-eslint/consistent-type-assertions": ["error", { "assertionStyle": "as", "objectLiteralTypeAssertions": "allow-as-parameter" }],
+    "@typescript-eslint/no-implicit-any-catch": ["error", {"allowExplicitAny": false}],
+    "@typescript-eslint/no-require-imports": ["error"],
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": ["error"],
+    "@typescript-eslint/no-unnecessary-condition": ["error"],
+    "@typescript-eslint/no-unnecessary-type-constraint": ["error"],
+    "@typescript-eslint/prefer-for-of": ["error"],
+    "@typescript-eslint/prefer-includes": ["error"],
+    "@typescript-eslint/prefer-literal-enum-member": ["error"],
+    "@typescript-eslint/prefer-nullish-coalescing": ["error"],
+    "@typescript-eslint/prefer-optional-chain": ["error"],
+    "@typescript-eslint/prefer-readonly": ["error"],
+    "@typescript-eslint/prefer-reduce-type-parameter": ["error"],
+    "@typescript-eslint/prefer-string-starts-ends-with": ["error"],
+    "@typescript-eslint/promise-function-async": ["error"],
+    "@typescript-eslint/restrict-plus-operands": ["error"],
+    "@typescript-eslint/strict-boolean-expressions": ["error"],
+    "@typescript-eslint/type-annotation-spacing": ["error"],
+    "@typescript-eslint/unified-signatures": ["error"],
+    // "@typescript-eslint/prefer-readonly-parameter-types": ["error"],
+
     "array-element-newline": "off",
     "arrow-parens": ["error", "as-needed"],
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "brace-style": "off",
+    "@typescript-eslint/brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "capitalized-comments": ["error", "never", {
       "ignorePattern": ".*"
     }],
     "curly": ["error", "multi-line"],
     "default-param-last": "off",
+    "@typescript-eslint/default-param-last": "off",
     "dot-location": ["error", "property"],
     "function-call-argument-newline": ["error", "consistent"],
     "function-paren-newline": "off",
     "id-length": "off",
-    "indent": ["error", 2, {
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2, {
       "SwitchCase": 1,
       "VariableDeclarator": 1,
       "outerIIFEBody": 1,
@@ -70,21 +93,26 @@ module.exports = {
     "max-nested-callbacks": ["error", 3],
     "multiline-comment-style": "off",
     "multiline-ternary": ["error", "always-multiline"],
-    "no-extra-parens": ["error", "functions"],
+    "no-extra-parens": "off",
+    "@typescript-eslint/no-extra-parens": ["error", "functions"],
     "no-inline-comments": "off",
     "no-plusplus": "off",
     "no-return-await": "off",
     "no-ternary": "off",
     "no-trailing-spaces": ["error", { "ignoreComments": true }],
-    "no-unused-variable": "off",
     "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": ["error"],
     "no-warning-comments": "off",
-    "object-curly-spacing": ["error", "always"],
+    "object-curly-spacing": "off",
+    "@typescript-eslint/object-curly-spacing": ["error", "always"],
     "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
     "one-var": "off",
     "padded-blocks": "off",
     "prefer-const": "off",
-    "quotes": ["error", "single", {
+    "quotes": "off",
+    "@typescript-eslint/quotes": ["error", "single", {
       "avoidEscape": true,
       "allowTemplateLiterals": true }
     ],
@@ -92,5 +120,6 @@ module.exports = {
     "sort-keys": "off",
     "sort-imports": "off",
     "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
   }
 };

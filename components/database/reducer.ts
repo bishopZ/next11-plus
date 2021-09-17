@@ -45,7 +45,7 @@ let currentState: AppStateModel = { ...initialState };
 const newState = () => Object.freeze({ ...currentState });
 
 /** the main application reducer */
-export const reducer = (state: AppStateModel, action: ActionModel) => {
+export const reducer = (state: Readonly<AppStateModel>, action: Readonly<ActionModel>) => {
 
   // using console here can reveal a lot of about what the application is doing
   // console.log(action, state);

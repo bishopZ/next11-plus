@@ -5,7 +5,7 @@ import H2 from './atoms/h2';
 import ArticleDate from './atoms/articleDate';
 import ArticleAuthor from './atoms/articleAuthor';
 
-interface Props { card: PostModel; }
+interface Props { readonly card: PostModel }
 
 /** a single card */
 const CardView = ({ card }: Props) => (

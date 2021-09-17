@@ -1,6 +1,6 @@
 import styles from '../../styles/modules/Typography.module.scss';
 
-interface Props { date: Date | string; }
+interface Props { readonly date: Date | string; }
 
 /** generic display of a publication date */
 const ArticleDate = ({ date }: Props) => (

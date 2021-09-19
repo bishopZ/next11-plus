@@ -13,6 +13,7 @@ interface Props {
   placeholder: string;
   focus: boolean;
   isSearch: boolean;
+  className?: string;
 }
 
 type OptionalElement = HTMLInputElement | null;
@@ -29,7 +30,7 @@ class InputText extends Component<Props, JSX.Element> {
 
   render () {
     const {
-      value, onChange, name, label, ariaLabel, placeholder, index, isSearch
+      value, onChange, name, label, ariaLabel, placeholder, index, isSearch, className
     } = this.props;
 
     const dispatch = this.context;
@@ -40,6 +41,7 @@ class InputText extends Component<Props, JSX.Element> {
         &nbsp;
         <input
           type="text"
+          className={className}
           id={name} name={name}
           role={ isSearch ? 'search' : ''}
           aria-label={ariaLabel}

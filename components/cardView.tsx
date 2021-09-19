@@ -10,11 +10,13 @@ interface Props { readonly card: PostModel }
 /** a single card */
 const CardView = ({ card }: Props) => (
   <Link href={`/article/${card.id}`} passHref>
-    <li className={styles.card}>
-      <H2>{card.title}</H2>
-      <ArticleDate date={card.publishDate} />
-      <ArticleAuthor author={card.author} />
-    </li>
+    <a className={styles.card}>
+      <li>
+        <H2>{card.title}</H2>
+        <ArticleDate date={card.publishDate} />
+        <ArticleAuthor author={card.author} />
+      </li>
+    </a>
   </Link>
 );
 

@@ -2,7 +2,6 @@
 
 .container {
   min-height: 100vh;
-  padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,17 +13,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  & > * { margin: 1.25rem 0; }
+  align-items: center;
+  width: 100%;
 }
 
-.footer {
+.header, .footer {
   width: 100%;
-  height: 100px;
-  border-top: 0.1rem solid $light-gray;
-  padding: 3rem;
+  min-height: 10rem;
+  background-color: $light-gray;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  margin-top: 1rem;;
 }
 
 // https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939#81ec

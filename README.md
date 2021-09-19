@@ -58,7 +58,7 @@ npm run build
 + Updated the config files
 
 + Installed Sass
-+ Organized the CSS
++ Organized the CSS, made it mobile-first, added flexbox & will-change
 + Added WCAG and ARIA best practices
 
 + Added Next.js Document file, page-level Layouts, and error pages.
@@ -86,12 +86,12 @@ npm run build
 
 ## TODO
 
-+ generator function example
 + Add Suspence
-+ Content aware image crop, https://github.com/jwagner/smartcrop.js
++ Web animation examples with translate, keysframes, filter, opacity, color
 
-+ better design, mobile-first, responsive CSS
-+ Flexbox, https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic
++ Content aware image crop, https://github.com/jwagner/smartcrop.js
++ generator *function example
+
 + requestAnimationFrame example
 + Add a screenshot to the readme
 
@@ -107,7 +107,7 @@ npm run build
 + Node logging, https://blog.appsignal.com/2021/09/01/best-practices-for-logging-in-nodejs.html
 
 + Host on vercel, when they support Node 16.x
-+ use more ??, ${arg2 || null}
++ use more ??, ${arg2 || null}, for of loop
 + ask denver devs for a code review
 + review config files, compare to others
 + HTML review, compare to Apple/Airbnb/Twitter

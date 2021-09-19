@@ -5,16 +5,19 @@
   padding: 1.5rem;
   text-align: left;
   color: inherit;
+  background-color: $white;
   text-decoration: none;
   border: 0.06rem solid $dark-gray;
-  border-radius: 0.63rem;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  border-radius: 0.3rem;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  will-change: background-color, border-color, color;
   list-style: none;
-  cursor: pointer;
-  
-  &:hover, &:focus, &:active {
+  width: 20rem;
+
+  &[href]:hover, &[href]:focus, &[href]:active {
     color: $blue;
     border-color: $blue;
+    background-color: $light-gray;
   }
   h2 {
     margin: 1rem;
@@ -28,8 +31,10 @@
 }
 
 .cardList {
-  max-width: 53rem;
-  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   width: 100%;
   ul { padding: 0; width: 100%; }
 }

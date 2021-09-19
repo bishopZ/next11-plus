@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import styles from '../styles/modules/Cards.module.scss';
 
 /** example component for useState and useEffect */
 const Counter = () => {
@@ -20,7 +21,7 @@ const Counter = () => {
   });
 
   return (
-    <section>
+    <section className={styles.card}>
       <p>Stateful component</p>
       <button onClick={() => { setCount(--count); }}>down</button>
       <span>&nbsp; {count} &nbsp;</span>

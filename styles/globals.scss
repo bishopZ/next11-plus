@@ -79,4 +79,26 @@ button {
   border-radius: 0;
   border: 0.06rem solid $dark-gray;
   cursor: pointer;
+  background-color: $light-gray;
+  transition: 0.15s background-color ease;
+  will-change: background-color;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+input, textarea {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 0.1rem solid $light_gray;
+  width: 90%;
+  font-size: 1.5rem;
+  padding: 0 0 0.3rem;
+  margin: 3rem auto;
+  display: block;
+  font-family: inherit;
+  color: $dark_gray;
+  min-width: 0; /* inputs and fieldset defaults to having a min-width equal to its content in Chrome and Firefox (https://code.google.com/p/chromium/issues/detail?id=560762), we may not want that */
 }

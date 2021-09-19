@@ -15,6 +15,13 @@ export const posts: readonly PostModel[] = [
     publishDate: new Date().toDateString(),
     author: { name: 'bishop' },
     state: 'published'
+  },
+  {
+    id: '125',
+    title: 'post 3',
+    publishDate: new Date().toDateString(),
+    author: { name: 'bishop' },
+    state: 'published'
   }
 ];
 

@@ -10,7 +10,9 @@ import { initialState, reducer } from '../components/database/reducer';
 import SearchInput from '../components/searchInput';
 import Layout from '../components/sitewide/layout';
 import MetaHeader from '../components/sitewide/meta';
-import styles from '../styles/modules/Layout.module.scss';
+import layoutStyles from '../styles/modules/Layout.module.scss';
+import cardStyles from '../styles/modules/Cards.module.scss';
+
 
 interface Props { readonly posts: PostModel[] }
 
@@ -26,14 +28,14 @@ const Home: LayoutComponent = (props: Props) => {
   if (state.appState === START && _.isArray(posts)) setPosts(dispatch, posts);
 
   const { searchPhrase, siteInfo } = state;
-  const { container, main } = styles;
+  const { container, main } = layoutStyles;
 
   return (
     <Layout siteInfo={siteInfo}>
       <div className={container}>
         <MetaHeader siteInfo={siteInfo} />
         <div className={main}>
-          <form>
+          <form className={cardStyles.card}>
             <DispatchContext.Provider value={dispatch}>
               <SearchInput
                 value={searchPhrase}

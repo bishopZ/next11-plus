@@ -3,9 +3,12 @@
 .h1 {
   margin: 0;
   line-height: 6rem;
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
   font-family: $title-font;
+  @media (min-width: $above-mobile) {
+    font-size: 4rem;
+  }
 }
 .h2 {
   margin: 0;

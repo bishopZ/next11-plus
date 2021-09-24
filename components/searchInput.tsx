@@ -11,9 +11,9 @@ interface Props {
 const SearchInput = ({ value, onChange }: Props) => (
   <InputText
     name="search-phrase"
-    label="A Controlled Input"
-    ariaLabel="Search through site content"
-    placeholder="Search query"
+    label="Name Search"
+    ariaLabel="Search by name"
+    placeholder="Search by name"
     index={0}
     focus={true}
     isSearch={true}

@@ -29,7 +29,7 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
-    "@typescript-eslint/consistent-type-assertions": ["error", { "assertionStyle": "as", "objectLiteralTypeAssertions": "allow-as-parameter" }],
+    // "@typescript-eslint/consistent-type-assertions": ["error", { "assertionStyle": "as", "objectLiteralTypeAssertions": "allow-as-parameter" }],
     "@typescript-eslint/no-implicit-any-catch": ["error", {"allowExplicitAny": false}],
     "@typescript-eslint/no-require-imports": ["error"],
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": ["error"],
@@ -54,6 +54,7 @@ module.exports = {
     "arrow-parens": ["error", "as-needed"],
     "brace-style": "off",
     "@typescript-eslint/brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "camelcase": "off",
     "capitalized-comments": ["error", "never", {
       "ignorePattern": ".*"
     }],

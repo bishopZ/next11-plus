@@ -1,21 +1,36 @@
+import type { Dictionary } from 'lodash';
+import type { InferGetStaticPropsType } from 'next';
 import * as Actions from './actions';
-import { InferGetStaticPropsType } from 'next';
-
-/** type of actions sent to dispatch */
-export interface ActionModel {
-  type: Actions.ActionTypeString;
-  text?: string;
-  posts?: readonly PostModel[];
-}
 
 /** for the dispatch context file */
-export type Dispatch = (object: Readonly<ActionModel>) => void;
+export type Dispatch = (object: ActionModel) => void;
+
+/** for Components that implement next/layout */
+export type LayoutComponent = {
+  (props: InferGetStaticPropsType<Promise<PostsReturn>>): JSX.Element;
+
+  /** pages implement their own page layout */
+  getLayout?: (page: Readonly<Record<string, unknown>>) => JSX.Element;
+}
+
+/** common response shape */
+export interface Posts {
+  readonly response: PeopleResponse;
+  readonly sortedList: Dictionary<PostModel[]>;
+}
+
+/** type of actions sent to dispatch */
+export interface ActionModel extends Partial<Posts> {
+  readonly type: Actions.ActionTypeString;
+  readonly text?: string;
+  readonly newPage?: string;
+}
 
 /** single post return object */
 export type PostReturn = { props: { post: PostModel } };
 
 /** multiple post return object */
-export type PostsReturn = { props: { posts: readonly PostModel[] } };
+export type PostsReturn = { props: Posts };
 
 /** generic form of getStaticProps */
 type GenericQuery = {
@@ -41,19 +56,31 @@ export type PathsQuery = {
   fallback: boolean;
 };
 
-/** for Components that implement next/layout */
-export type LayoutComponent = {
-  (props: InferGetStaticPropsType<Promise<PostsReturn>>): JSX.Element;
-
-  /** pages implement their own page layout */
-  getLayout?: (page: Readonly<Record<string, unknown>>) => JSX.Element;
-}
-
 /** model of a single post */
 export interface PostModel {
-  id: string;
-  title: string;
-  publishDate: Date | string;
-  author?: { name: string; };
-  state?: Actions.PublicationState
+  readonly name: string;
+  readonly height: string;
+  readonly mass: string;
+  readonly hair_color: string;
+  readonly skin_color: string;
+  readonly eye_color: string;
+  readonly birth_year: string;
+  readonly gender: string;
+  readonly homeworld: string;
+  readonly films?: string[],
+  readonly species?: string[],
+  readonly vehicles?: string[],
+  readonly starships?: string[],
+  readonly created: string;
+  readonly edited: string;
+  readonly url: string;
+  id?: string;
+}
+
+/** People API response shape */
+export interface PeopleResponse {
+  readonly count: number;
+  readonly next: null | string;
+  readonly previous: null | string;
+  readonly results: PostModel[];
 }

@@ -7,6 +7,8 @@ export type Dispatch = (object: ActionModel) => void;
 
 /** for Components that implement next/layout */
 export type LayoutComponent = {
+  // should be converted to use NextPage type
+  // it might break when updating next.js versions
   (props: InferGetStaticPropsType<Promise<PostsReturn>>): JSX.Element;
 
   /** pages implement their own page layout */

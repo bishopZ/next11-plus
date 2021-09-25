@@ -1,7 +1,7 @@
+import type { PostModel } from './database/models';
 import Link from 'next/link';
-import { PostModel } from './database/models';
-import styles from '../styles/modules/Cards.module.scss';
 import H3 from './atoms/h3';
+import styles from '../styles/modules/Cards.module.scss';
 
 interface Props { readonly card: PostModel }
 

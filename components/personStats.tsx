@@ -1,10 +1,10 @@
 import Statistic from './atoms/statistic';
 import { PostModel } from './database/models';
 
-interface Props { post: PostModel; }
+interface Props { readonly post: PostModel; }
 
 const PeopleStats = ({ post }: Props) => {
-  const { films = [], species = [], vehicles = [], starships = [] } = post;
+  const { films = [], vehicles = [], starships = [] } = post;
   return (
     <>
       <Statistic name={'name'} value={post.name} />
@@ -15,14 +15,13 @@ const PeopleStats = ({ post }: Props) => {
       <Statistic name={'eye color'} value={post.eye_color} />
       <Statistic name={'birth year'} value={post.birth_year} />
       <Statistic name={'gender'} value={post.gender} />
-      <Statistic name={'homeworld'} value={post.homeworld} />
       <Statistic name={'films'} value={films.length.toString()} />
-      <Statistic name={'species'} value={species.length.toString()} />
       <Statistic name={'vehicles'} value={vehicles.length.toString()} />
       <Statistic name={'starships'} value={starships.length.toString()} />
       <Statistic name={'created'} value={new Date(post.created).toLocaleDateString()} />
       <Statistic name={'edited'} value={new Date(post.edited).toLocaleDateString()} />
-      <Statistic name={'url'} value={post.url} />
+      <Statistic name={'homeworld api url'} value={post.homeworld} />
+      <Statistic name={'api url'} value={post.url} />
     </>
   );
 };

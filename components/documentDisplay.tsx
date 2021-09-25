@@ -10,12 +10,14 @@ const DocumentDisplay = (props: Props) => {
 
   const { post } = props;
   const { name } = post;
+
   return (
     <section role="article">
       <H2>{name}</H2>
       <PeopleStats post={post} />
+      <br />
       <ImageDisplay
-        description="a remote example image"
+        description="an example image"
         src={'https://upload.wikimedia.org/wikipedia/commons/b/b5/Staring_Down_Hurricane_Florence.jpg'}
         width={300}
         height={300}

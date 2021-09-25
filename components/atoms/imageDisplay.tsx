@@ -2,18 +2,18 @@ import Image from 'next/image';
 
 /** properties for next/image */
 interface Props {
-  src: StaticImageData | string;
-  description: string;
-  height: number;
-  width: number;
-  aboveFold: boolean;
+  readonly src: StaticImageData | string;
+  readonly description: string;
+  readonly height: number;
+  readonly width: number;
+  readonly aboveFold: boolean;
 }
 
 /** generic display of an images */
 const ImageDisplay = ({ src, description, height, width, aboveFold }: Readonly<Props>) => (
   <Image
     alt={description}
-    src={src as StaticImageData}
+    src={src}
     width={width}
     height={height}
     layout={'intrinsic'} /* fixed, responsive, fill */

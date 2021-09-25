@@ -13,7 +13,7 @@ const getNewPageMemo: Record<string, Posts> = {};
 const getSearchMemo: Record<string, Posts> = {};
 
 /** necissary helper */
-const has = (
+export const has = (
   target: Record<ObjectKeys, unknown>, property: ObjectKeys
 ): boolean => Object.prototype.hasOwnProperty.call(target, property);
 

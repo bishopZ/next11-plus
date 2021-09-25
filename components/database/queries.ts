@@ -1,7 +1,9 @@
 import { ParsedUrlQuery } from 'querystring';
 import { Dictionary } from 'lodash';
 import { PostsQuery, PeopleResponse, PostModel, PostQuery, PathsQuery, Posts } from './models';
-import { postResponseProcess } from './comms';
+import { has, postResponseProcess } from './comms';
+
+type SortedList = Dictionary<PostModel[]>;
 
 const endpoint = 'https://swapi.dev/api/people/';
 
@@ -15,20 +17,28 @@ const hourInMinutes = 60;
 const hourInSeconds = (hourInMinutes * minuteInSeconds) as Seconds;
 
 const toJson = async (response: Response) => await response.json();
+const speciesMemo: Record<string, string> = {};
+const minLength = 1;
+const defaultIndex = '1';
 
 /** get the species names for each person */
 const getSpeciesNames = async (
-  sortedList: Dictionary<PostModel[]>
-): Promise<Dictionary<PostModel[]>> => {
+  sortedList: SortedList
+): Promise<SortedList> => {
   await Promise.all(Object.keys(sortedList).map(async key => {
-    const minLength = 1;
     if (key.length > minLength) {
-      await fetch(key)
-        .then(toJson)
-        .then(result => {
-          sortedList[result.name] = sortedList[key];
-          delete sortedList[key];
-        });
+      if (has(speciesMemo, key)) {
+        sortedList[speciesMemo[key]] = sortedList[key];
+        delete sortedList[key];
+      } else {
+        await fetch(key)
+          .then(toJson)
+          .then(result => {
+            speciesMemo[key] = result.name;
+            sortedList[result.name] = sortedList[key];
+            delete sortedList[key];
+          });
+      }
     }
   }));
   return sortedList;
@@ -37,13 +47,15 @@ export { getSpeciesNames };
 
 /** get all published posts */
 const getPosts = async (): Promise<PostsQuery> => {
+  const deadMemo = {};
+  const deadKey = '';
   let response: PeopleResponse = { count: 0, results: [], next: null, previous: null };
-  let sortedList: Dictionary<PostModel[]> = {};
+  let sortedList: SortedList = {};
   let props: Posts = { response, sortedList };
   await fetch(endpoint)
     .then(toJson)
     .then(async (data: PeopleResponse) => {
-      props = await postResponseProcess(data, '', {});
+      props = await postResponseProcess(data, deadKey, deadMemo);
     });
   return { props, revalidate: hourInSeconds };
 };
@@ -51,11 +63,10 @@ export { getPosts };
 
 /** get a post by id */
 const getPost = async (params: Readonly<ParsedUrlQuery>): Promise<PostQuery> => {
-  const defaultIndex = '1';
+  let thePost = {} as PostModel; // is there a better way?
   const id = typeof params.id === 'string'
     ? params.id
     : defaultIndex;
-  let thePost = {} as PostModel; // is there a better way?
   await fetch(endpoint + id)
     .then(toJson)
     .then((data: PostModel) => { thePost = data; });
@@ -65,14 +76,12 @@ export { getPost };
 
 /** get the path of all posts */
 const getPostPaths = async (): Promise<PathsQuery> => {
-
-  /** await in anticipation of using an api */
   let thePaths: string[] = [];
   await fetch(endpoint)
-    .then(async response => await response.json())
+    .then(toJson)
     .then((data: PeopleResponse) => {
       const { count } = data;
-      for (let i = 1; i < count; i++) {
+      for (let i = 1; i <= count; i++) {
         thePaths.push(`/person/${i.toString()}`);
       }
     });

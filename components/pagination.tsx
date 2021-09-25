@@ -11,6 +11,9 @@ interface Props {
   readonly fullCount: number;
 }
 
+const offset = 1;
+const itemCount = 10;
+
 /** a controlled input */
 class Pagination extends Component<Props, JSX.Element> {
 
@@ -18,8 +21,6 @@ class Pagination extends Component<Props, JSX.Element> {
   static contextType = DispatchContext;
 
   render() {
-    const offset = 1;
-    const itemCount = 10;
     const dispatch = this.context;
     const { next, prev, page, fullCount } = this.props;
     const startIndex = (page * itemCount) + offset;
@@ -32,14 +33,14 @@ class Pagination extends Component<Props, JSX.Element> {
           <a href={prev} onClick={event => {
             event.preventDefault();
             changePage(dispatch, prev);
-          }}>&lt; prev</a>
+          }}>&larr; prev</a>
         }
         <p>page {page + offset}, {startIndex} to {endIndex} of {fullCount}</p>
         { next !== null &&
           <a href={next} onClick={event => {
             event.preventDefault();
             changePage(dispatch, next);
-          }}>next &gt;</a>
+          }}>next &rarr;</a>
         }
       </div>
     );

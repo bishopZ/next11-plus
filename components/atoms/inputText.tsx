@@ -4,16 +4,16 @@ import DispatchContext from '../context/dispatchContext';
 
 /** properties for a controlled text input */
 interface Props {
-  value: string;
-  onChange: (dispatch: Dispatch, value: string) => void;
-  name: string;
-  label: string;
-  ariaLabel: string;
-  index: number;
-  placeholder: string;
-  focus: boolean;
-  isSearch: boolean;
-  className?: string;
+  readonly value: string;
+  readonly onChange: (dispatch: Dispatch, value: string) => void;
+  readonly name: string;
+  readonly label: string;
+  readonly ariaLabel: string;
+  readonly index: number;
+  readonly placeholder: string;
+  readonly focus: boolean;
+  readonly isSearch: boolean;
+  readonly className?: string;
 }
 
 type OptionalElement = HTMLInputElement | null;

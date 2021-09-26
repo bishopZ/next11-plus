@@ -14,11 +14,9 @@ interface Props {
 }
 
 export const PostPage: LayoutComponent = (props: Props) => {
-
   const { post, state } = props;
   const { siteInfo } = state;
   const { container, main } = layoutStyles;
-
   return (
     <Layout siteInfo={siteInfo}>
       <div className={container}>
@@ -46,5 +44,4 @@ const getStaticProps = async (
     ? await getPost(props.params)
     : null
 );
-
 export { getStaticProps };

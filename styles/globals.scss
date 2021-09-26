@@ -27,13 +27,9 @@ html, body {
   font-weight: normal; font-style: normal;
 }
 
-body * {
-  font-family: $body-font;
-}
+body * { font-family: $body-font; }
 
-p {
-  margin-bottom: 0.5rem;
-}
+p { margin-bottom: 0.5rem; }
 
 a {
   color: inherit;
@@ -84,9 +80,7 @@ button {
   transition: 0.15s background-color ease;
   will-change: background-color;
 
-  &:hover {
-    background-color: $white;
-  }
+  &:hover { background-color: $white; }
 }
 
 input, textarea {

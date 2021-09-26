@@ -52,9 +52,7 @@ class InputText extends Component<Props, JSX.Element> {
           onChange={(event: Readonly<ChangeEvent<HTMLInputElement>>) => {
             onChange(dispatch, event.currentTarget.value);
           }}
-          ref={element => {
-            this.formField = element;
-          }}
+          ref={element => { this.formField = element; }}
         />
       </>
     );

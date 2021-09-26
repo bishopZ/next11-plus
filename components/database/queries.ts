@@ -18,8 +18,7 @@ const hourInSeconds = (hourInMinutes * minuteInSeconds) as Seconds;
 
 const toJson = async (response: Response) => await response.json();
 const speciesMemo: Record<string, string> = {};
-const minLength = 1;
-const defaultIndex = '1';
+const minLength = 1, defaultIndex = '1';
 
 /** get the species names for each person */
 const getSpeciesNames = async (

@@ -1,6 +1,9 @@
 import styles from '../../styles/modules/Stats.module.scss';
 
-interface Props { readonly name: string, readonly value: string | undefined }
+interface Props {
+  readonly name: string,
+  readonly value: string | undefined
+}
 
 /** a single statistic, name & value */
 const Statistic = ({ name, value }: Props) => (

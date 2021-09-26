@@ -7,10 +7,8 @@ interface Props { readonly post: PostModel; }
 
 /** a post's detail view */
 const DocumentDisplay = (props: Props) => {
-
   const { post } = props;
   const { name } = post;
-
   return (
     <section role="article">
       <H2>{name}</H2>

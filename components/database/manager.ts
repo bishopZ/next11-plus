@@ -2,11 +2,7 @@ import type { ActionModel } from './models';
 import * as Actions from './actions';
 import { AppStateModel } from './reducer';
 
-const lastChar = -1;
-const base = 10;
-const offset = 1;
-const defaultPage = 0;
-const minLength = 1;
+const lastChar = -1, base = 10, offset = 1, defaultPage = 0, minLength = 1;
 
 // These are the data mutation functions.
 
